@@ -4,11 +4,17 @@
     box-sizing: border-box;
   }
   
+
+  header {
+    width: 100%;
+    text-align: center;
+  }
   h1 {
-    color: #426696;
+    color: #d93aee;
     font-weight: 600;
     font-size: 3rem;
     opacity: 0.8;
+    width: 100%;
   }
   h2,
   p {
@@ -69,5 +75,11 @@
   border-radius: 2rem;
   z-index: 2;
   backdrop-filter: blur(2rem);
-  display: flex;
+  /* display: flex; */
 }
+
+
+
+
+
+

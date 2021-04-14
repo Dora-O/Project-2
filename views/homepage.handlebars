@@ -1,1 +1,7 @@
-HELLOW WORLD
+{{#each project as |projects|}}
+
+{{> streams projects }}
+
+{{else}}
+<h6 class="has-text-centered">there are currently no posts</h6>
+{{/each}}
