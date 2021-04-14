@@ -11,6 +11,21 @@ const projectdata = [
         media_link: 'https://youtu.be/GQsDzlJ7brE',
         description: 'How to install and use profile generator'
     },
+    {
+        title: 'Team Profile Generator',
+        media_link: 'https://youtu.be/GQsDzlJ7brE',
+        description: 'How to install and use profile generator'
+    },
+    {
+        title: 'Team Profile Generator',
+        media_link: 'https://youtu.be/GQsDzlJ7brE',
+        description: 'How to install and use profile generator'
+    },
+    {
+        title: 'Team Profile Generator',
+        media_link: 'https://youtu.be/GQsDzlJ7brE',
+        description: 'How to install and use profile generator'
+    },
 ];
 
 const seedProject = () => Projects.bulkCreate(projectdata);

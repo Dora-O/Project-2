@@ -10,24 +10,49 @@
     text-align: center;
   }
   h1 {
-    color: #d93aee;
+    font-family: 'Monoton', cursive;
+    color: #eede06;
+    font-size: 5rem;
+    opacity: 0.8;
+    width: 100%;
+  }
+  
+h2 {
+  color: #d831ee;
     font-weight: 600;
     font-size: 3rem;
     opacity: 0.8;
     width: 100%;
-  }
-  h2,
+    margin-bottom: -15px;
+}
+
+
+h3 {
+  color: #5d9efa;
+    font-weight: 500;
+    opacity: 0.8;
+    text-align: center;
+}
+
+
+h4 {
+  color: #f025e6;
+  font-weight: 600;
+  opacity: 0.8;
+}
+
+
   p {
-    color: #658ec6;
+    color: #3886f5;
     font-weight: 500;
     opacity: 0.8;
   }
   
-  h3 {
-    color: #426696;
-    font-weight: 600;
-    opacity: 0.8;
-  }
+
+a{
+  text-decoration: none;
+}
+
   
   main {
     font-family: "Poppins", sans-serif;
@@ -62,11 +87,11 @@
   left: 10%;
 }
 
-
 .glass {
   background: white;
   min-height: 80vh;
-  width: 80%;
+  max-height: fit-content;
+  width: 90%;
   background: linear-gradient(
     to right bottom,
     rgba(255, 255, 255, 0.7),
@@ -75,11 +100,177 @@
   border-radius: 2rem;
   z-index: 2;
   backdrop-filter: blur(2rem);
-  /* display: flex; */
+text-align: center; 
+ display: inline; 
+}
+
+.nav-bar {
+  /* flex: 1;
+  display: flex;
+  flex-direction: column; */
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: center;
+  background: linear-gradient(
+    to right bottom,
+    rgba(245, 195, 255, 0.7),
+    rgba(253, 1, 232, 0.3)
+  );
+  border-radius: 2rem  2rem 0rem 0rem;
+  margin-bottom: 3rem;
+  max-height: 6rem;
+ 
+/*   position:fixed; */
+}
+
+.nav-items{
+  margin: 2rem 2rem 2rem 4rem;
+  text-align: center;
+}
+
+.nav-item{
+  float: left;
+  position: relative;
+  margin-left: 2rem;
+}
+
+h1:hover{
+  color: #ed28ff;
+    transform:scale(1.02);
+  }
+  
+
+
+.nav-item img{
+  margin-top: 10px;
+}
+
+
+.nav-item img:hover{
+  transform:scale(1.15);
+}
+
+
+/* .stream-card-title{
+  background: linear-gradient(
+  to left top,
+  rgba(255, 255, 255, 0.5),
+  rgba(133, 253, 243, 0.8)
+  )
+
+} */
+
+
+
+
+
+
+
+
+
+
+/* HOMEPAGE */
+
+
+
+.stream-card{
+  background: linear-gradient(
+  to left top,
+  rgba(255, 255, 255, 0.5),
+  rgba(133, 253, 243, 0.8)
+  )
+
+}
+
+.streams-title{
+  font-size: 4.5rem;
+  font-weight: bold;
+  color: rgba(99, 212, 247, 0.904);
+ /*  background: linear-gradient(to right top, #fffb04, #ff771c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; */
+ margin: -1rem auto;
+  border-radius: 2rem; 
+  max-width: 80%;
+}
+
+
+.stream-card {
+  max-width: 80%;
+  /*   display: flex; */
+  background:
+  url(https://img.icons8.com/nolan/128/desura.png) no-repeat, 
+    linear-gradient(
+      to left top,
+      rgba(213, 255, 205, 0.8),
+      rgba(255, 153, 250, 0.5)
+    );
+    border-radius: 3rem;
+    margin: 2rem auto;
+    min-height: 10rem;
+    padding: 1rem;
+    box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.212);
+    justify-content: space-between;
+    background-position: 10% 50%;
+    display: block;
+  }
+
+  
+.stream-card:hover{
+  transform:scale(1.05);
+}
+
+.title {
+  font-weight: bold;
+  background: linear-gradient(to right top, #f861f1, #f0c1f1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.create-title{
+  font-size: 5rem;
+  font-weight: bold;
+  background: linear-gradient(to right top, #4cc5f5, #b7eefc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 1rem;
+
+}
+.create-title:hover{
+background: linear-gradient(to right top, #fceb00, #f5ea8b);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+
+.card-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 
 
 
 
+@media only screen and (max-width: 1200px) {
+  
 
+
+  .stream-card {
+
+    background:
+    url() no-repeat, 
+      linear-gradient(
+        to left top,
+        rgba(213, 255, 205, 0.8),
+        rgba(255, 153, 250, 0.5)
+      );
+  }
+
+
+.create-title{
+  font-size: 3rem;
+ 
+}
+
+}
