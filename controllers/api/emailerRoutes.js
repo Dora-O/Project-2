@@ -18,21 +18,15 @@ router.get('/', async (req, res) => {
 router.post('/', async (req, res) => {
     try {
         const transporter = nodemailer.createTransport({
-            // service: 'outlook',
-            // auth: {
-            //   type: 'login',
-            //   user: 'premiereshow2021@outlook.com',
-            //   pass: 'Welovemanny2021!'
-            // },
+            service: 'outlook',
             host: "smtp.office365.com",
             port: 587,
-            secure: false, // use TLS
+            secure: false,
             auth: {
-              user: "premiereshow2021@outlook.com",
-              pass: "Welovemanny2021!"
+              user: process.env.EMAIL,
+              pass: process.env.EMAIL_PASS
             },
             tls: {
-              // do not fail on invalid certs
               rejectUnauthorized: false
             },
 
@@ -50,11 +44,12 @@ router.post('/', async (req, res) => {
         });
 
         const mailOptions = {
-            from: req.body.from,
+            from: process.env.EMAIL,
             to: req.body.to,
             subject: req.body.subject,
             text: req.body.content,
         };
+
         transporter.sendMail(mailOptions, function (error, info) {
             if (error) {
                 console.log(error);
