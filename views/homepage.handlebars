@@ -1,7 +1,27 @@
-{{#each project as |projects|}}
+<div class="streams-title">
 
-{{> streams projects }}
+    UPCOMING STREAMS
 
-{{else}}
-<h6 class="has-text-centered">there are currently no posts</h6>
+</div>
+{{#each projects as |project| }}
+
+<a href="/api/projects/{{id}}" id="blog-name">
+    <div class="stream-card">
+        <div class="card-info">
+            <h2 class="title">
+                {{title}}
+            </h2>
+            <h3>By {{username}}</h3>
+
+            <p>{{description}}</p>
+            <p class="">Created on <span>{{projects_date}}</span></p>
+        </div>
+    </div>
+</a>
 {{/each}}
+
+<a href="/api/create">
+    <h2 class="create-title"> CREATE NEW PROJECT </h2>
+</a>
+
+<script src="./js/homepage.js"></script>

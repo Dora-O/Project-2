@@ -29,8 +29,8 @@ router.get('/', async (req, res) => {
             ],
         });
 
-        const projects = dbProjectsData.map((projects) =>
-            projects.get({ plain: true })
+        const projects = dbProjectsData.map((project) =>
+            project.get({ plain: true })
         );
         // Send over the 'loggedIn' session variable to the 'Dashboard' template
         res.render('dashboard', {
