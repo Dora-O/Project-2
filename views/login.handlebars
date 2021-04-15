@@ -1,22 +1,46 @@
-<div class="column">
-    <div class="login-card">
-        <h2 class="page-title">Login</h2>
+<div class="wrapper">
+
+
+    <div class="container" id="welcome-box">
+        <h2 class="welcome-title">WELCOME TO THE SHOW</h2>
+        <img src="https://media.giphy.com/media/3o7aTl8m8NLZu8AW2Y/giphy.gif" alt="">
+    </div>
+
+    <div class="container" id="log-in-box">
         <form class="form login-form">
-            <div class="form-group">
-                <label for="email-login">Email:</label>
-                <input class="form-input" type="text" id="email-login" />
-            </div>
-            <div class="form-group">
-                <label for="password-login">Password:</label>
-                <input class="form-input" type="password" id="password-login" />
-            </div>
-            <div class="form-group">
-                <button class="btn btn-primary" type="submit">login</button>
-                <button class="button">
-                    <a class="create-account-button button" href="/signup">Create An Account</a>
-            </div>
+            <class class="form-group">
+                <label for="email-login" class="form__label"></label>
+                <h2 class="page-title">EMAIL</h2>
+                </label>
+            </class><br>
+            <input class="form-input" type="text" id="email-login" onfocus="this.value=''" />
+
+            <label for="password-login" class="form__label">
+                <h2 class="page-title">PASSWORD</h2>
+            </label><br>
+            <input class="form-input" type="password" id="password-login" onfocus="this.value=''" />
+            <br>
+
+            <a href="/">
+                <div class="login-button button" type="submit">
+                    <h2>LOG IN</h2>
+                </div>
+            </a>
+            <a href="/signup">
+                <div class="login-button button" type="submit">
+                    <h2>SIGN UP</h2>
+                </div>
+            </a>
+
+            {{!--
+            <button class="btn btn-primary" type="submit">login</button>
+            <button class="button">
+                <a class="create-account-button button" href="/signup">Create An Account</a>
+                --}}
         </form>
     </div>
 </div>
+
+
 
 <script src="./js/login.js"></script>
