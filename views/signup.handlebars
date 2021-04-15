@@ -1,29 +1,43 @@
 <div class="login-card">
-    <h2 class="page-title">Signup</h2>
+    <h2 class="signup-title"> CREATE ACCOUNT</h2>
     <form class="form signup-form">
         <div class="form-group">
-            <label for="name-signup">Name:</label>
-            <input class="form-input" type="text" id="name-signup" />
+            <label for="name-signup">
+                <h2>NAME</h2>
+            </label> <br>
+            <input class="form-input" type="text" id="name-signup" onfocus="this.value=''" />
         </div>
         <div class="form-group">
-            <label for="username-signup">Username:</label>
-            <input class="form-input" type="text" id="username-signup" />
+            <label for="username-signup">
+                <h2>USERNAME</h2>
+            </label> <br>
+            <input class="form-input" type="text" id="username-signup" onfocus="this.value=''" />
         </div>
         <div class="form-group">
-            <label for="email-signup">Email:</label>
-            <input class="form-input" type="text" id="email-signup" />
+            <label for="email-signup">
+                <h2>EMAIL</h2>
+            </label> <br>
+            <input class="form-input" type="text" id="email-signup" onfocus="this.value=''" />
         </div>
         <div class="form-group">
-            <label for="password-signup">Password:</label>
-            <input class="form-input" type="password" id="password-signup" />
+            <label for="password-signup">
+                <h2>PASSWORD</h2>
+            </label> <br>
+            <input class="form-input" type="password" id="password-signup" onfocus="this.value=''" />
         </div>
-        <div class="form-group">
-            <button class="btn btn-primary" type="submit">signup</button>
-        </div>
-        <button class="button">
-            <a href="/login">Already Registered?</a>
-        </button>
+        <br>
+        <a href="/signup">
+            <div class="signup-button button" type="submit">
+                <h2>SIGN UP</h2>
+            </div>
+        </a>
+        <a href="/login">
+            <div class="signup-button button" type="submit">
+                <h2>LOG IN</h2>
+            </div>
+        </a>
+
     </form>
 </div>
 
-<script scr = "./js/signup.js"></script>
+<script scr="./js/signup.js"></script>

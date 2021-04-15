@@ -151,6 +151,20 @@ h1:hover{
 }
 
 
+.body{
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: center;
+  /* background: linear-gradient(
+    to right bottom,
+    rgba(245, 195, 255, 0.7),
+    rgba(253, 1, 232, 0.3)
+  ); */
+  border-radius: 2rem  2rem 0rem 0rem;
+  margin: 12rem auto 5rem auto;
+}
+
+
 /* .stream-card-title{
   background: linear-gradient(
   to left top,
@@ -253,8 +267,6 @@ background: linear-gradient(to right top, #fceb00, #f5ea8b);
 
 
 @media only screen and (max-width: 1200px) {
-  
-
 
   .stream-card {
 
@@ -273,4 +285,233 @@ background: linear-gradient(to right top, #fceb00, #f5ea8b);
  
 }
 
+}
+
+
+
+
+
+
+
+
+
+
+/* LOGIN PAGE */
+
+.overlay1 {
+  position: absolute;
+  width: 1200%;
+  height: 100%;
+  left: -10%;
+  z-index: 2;
+  background: #ec1417;
+}
+.overlay2 {
+  position: absolute;
+  width: 1200%;
+  height: 100%;
+  left: -10%;
+  z-index: 2;
+  background: #46ec14;
+}
+.overlay3 {
+  position: absolute;
+  width: 1200%;
+  height: 100%;
+  left: -10%;
+  z-index: 2;
+  background: #000000;
+}
+.overlay4{
+  position: absolute;
+  width: 1200%;
+  height: 100%;
+  left: -10%;
+  z-index: 2;
+  background: #eff308;
+}
+
+.first {
+  top: 0;
+}
+
+.second {
+  top: 25%
+}
+
+.third {
+  top: 50%;
+}
+
+.forth {
+  top: 75%;
+}
+
+
+#log-in-box{
+  margin: auto;
+  padding-top: 3.5rem;
+  visibility: hidden;
+}
+
+#welcome-box{
+  margin: auto;
+  padding-top: 2.5rem;
+  visibility: hidden;
+  position: absolute;
+}
+
+.wrapper{
+  width: 100%;
+  max-width: 900px;
+  padding: 30px;
+  height: 100%;
+  min-height: 35rem;
+  text-align: center;
+  margin: auto;
+  background-image: url("https://media.giphy.com/media/Ph0oIVQeuvh0k/giphy.gif") ;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+.welcome-title{
+    font-size: 4.2rem;
+    font-weight: bold;
+    color: white;
+
+}
+
+
+
+.login-form{
+  margin: 1rem auto;
+}
+
+.login-form h2{
+  color: white;
+  font-size: 3rem;
+}
+
+.login-form label{
+  line-height: 2rem;
+  margin-bottom: -.5rem;
+}
+
+.login-form input{
+  width: 70%;
+  height: 40px;
+  border: 2px solid #cccccc;
+  margin-bottom: 2rem;
+}
+
+
+
+.login-button{
+   display: inline-block;
+   margin-left: 1rem;
+}
+
+.login-button h2:hover{
+  color: #fbff00;
+}
+
+input[type=text] {
+  border: none;
+  border-bottom: 4px solid rgb(116, 174, 250);
+  background-color: transparent;
+  font-size: 25px;
+  color: #4cc5f5;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+input[type=password] {
+  border: none;
+  border-bottom: 4px solid rgb(116, 174, 250);
+  background-color: transparent;font-size: 25px;
+  color: #4cc5f5;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+}
+
+textarea:focus, input:focus{
+  outline: none;
+}
+
+
+
+
+/* SIGN UP PAGE */
+
+
+.signup-title{
+  font-size: 4.2rem;
+  font-weight: bold;
+  color: rgb(25, 228, 255);
+  margin-bottom: 1rem;
+
+}
+
+
+.signup-form{
+  margin: 1rem auto;
+}
+
+.signup-form h2{
+  color: rgb(247, 40, 202);
+  font-size: 3rem;
+}
+
+.signup-form label{
+  line-height: 2rem;
+  margin-bottom: -.5rem;
+}
+
+.signup-form input{
+  width: 70%;
+  height: 40px;
+  border: 2px solid #cccccc;
+  margin-bottom: 2rem;
+}
+
+
+
+.signup-button{
+   display: inline-block;
+   margin-left: 1rem;
+
+}
+.signup-button h2{
+  color: rgb(25, 228, 255);
+}
+
+.signup-button h2:hover{
+  color: #fbff00;
+}
+
+input[type=text] {
+  border: none;
+  border-bottom: 4px solid rgb(116, 174, 250);
+  background-color: transparent;
+  font-size: 25px;
+  color: #4cc5f5;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+input[type=password] {
+  border: none;
+  border-bottom: 4px solid rgb(116, 174, 250);
+  background-color: transparent;font-size: 25px;
+  color: #4cc5f5;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+}
+
+textarea:focus, input:focus{
+  outline: none;
 }

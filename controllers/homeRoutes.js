@@ -77,7 +77,7 @@ router.get('/projects/:id', async (req, res) => {
       const projects = projectsData.get({ plain: true });
   
         // pass data to template
-      res.render('singleProject', {
+      res.render('project', {
         ...projects,
         logged_in: req.session.logged_in
       });
