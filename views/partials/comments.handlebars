@@ -1,10 +1,11 @@
 <section class="card">
-
+    {{#each this}}
     <a href="/comments/{{id}}">
         <div class="card-body">
-            <h5>User: {{users_id}}</h5>
+            <h5>User: {{users.username}}</h5>
             <h5>Comment: {{comments_content}}</h5>
-            <h5>Date: {{comments.date}}</h5>
+            <h5>Date: {{date}}</h5>
         </div>
     </a>
+    {{/each}}
 </section>

@@ -606,6 +606,55 @@ margin-bottom: 3rem;
 
 .comment-scroll{
   overflow-x: scroll;
-  min-height: 45rem;
+  min-height: 48rem;
 
 }
+.comment-form{
+  margin-top: -5rem;
+}
+
+.comment-form textarea{
+  width: 80%;
+  height: 7rem;
+  border: 2px solid #cccccc;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+  background: linear-gradient(to right top, #abffff, #a3f9ff);
+  font-size: 20px;
+  color: #f000c8;
+  text-transform: uppercase;
+
+}
+
+
+
+
+.emailer{
+  background: transparent;
+  width: 60%;
+  height: 8rem;
+  background: linear-gradient(to right top, #e100ff, hsl(66, 100%, 58%));
+  border-radius: 2rem;
+  z-index: 2;
+  float: left;
+  margin-bottom: 5rem ;
+  margin-top: -15rem;
+  
+  }
+
+  .emailer h2{
+    font-size: 4.5rem;
+    font-weight: bold;
+    color: rgba(99, 212, 247, 0.904);
+   /*  background: linear-gradient(to right top, #fffb04, #ff771c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
+   margin: .5rem auto;
+    max-width: 90%;
+
+  }
+
+  .emailer h2:hover{
+    color: yellow;
+
+  }

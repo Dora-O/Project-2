@@ -9,7 +9,7 @@
 
 <div class="container premiere">
     <div class="row">
-        <div class="col-lg-6 display">
+        <div class="display">
             <h2>{{title}}</h2>
             <section class="player">
                 <iframe width="760" height="515" src="{{media_link}}" title="YouTube video player" frameborder="0"
@@ -24,25 +24,39 @@
             <br><br><br>
 
         </div>
-        <div class="col-lg-6 comments">
+        <div class="comments">
             <section class="comment-title">
 
                 <h2>COMMENTS</h2>
             </section>
 
+            <form class="comment-form">
+                <div>
+                    <textarea class="comment-box" name="comment-body"></textarea>
+                </div>
+
+                <div>
+                    <button class="button comment-button" type="submit">add comment</button>
+                </div>
+
+            </form>
+
             {{!-- ? MAKE THIS SCROLLABLE --}}
             <div class="comment-scroll">
                 {{> comments projects.comments}}
             </div>
-
-
+        </div>
+        <div class="emailer">
+            <a href="/api/emailers">
+                <h2> INVITE YOUR FRIENDS </h2>
+            </a>
         </div>
     </div>
 </div>
 
 
 
-{{!--
+
 {{#if loggedIn}}
-<script src="../public/js/comments.js"></script>
-{{/if}} --}}
+<script src="./js/comments.js"></script>
+{{/if}}
