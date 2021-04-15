@@ -8,9 +8,9 @@ const projectdata = [
         users_id: '1',
     },
     {
-        title: 'Team Profile Generator',
-        media_link: 'https://youtu.be/GQsDzlJ7brE',
-        description: 'How to install and use profile generator',
+        title: 'TRAVIS SCOTT "FRANCHISE"',
+        media_link: 'https://www.youtube.com/embed/_VRyoaNF9sk',
+        description: ' Directed by Travis Scott ||  Shot by White Trash Tyler & Jordan Hemingway || US scenes produced by Randy Donaldson & Kevin Schroeder for Freenjoy',
         users_id: '2',
     },
     {

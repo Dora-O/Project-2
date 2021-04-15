@@ -67,6 +67,7 @@ router.get('/projects/:id', async (req, res) => {
 
 // CREATE Post on Dashboard
 router.get('/create', withAuth, async (req, res) => {
+    console.log(req.session.user_id)
     try {
         // Get all posts and JOIN with user data
         const projectsData = await Projects.findAll({

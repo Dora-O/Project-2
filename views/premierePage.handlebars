@@ -1,0 +1,48 @@
+<!-- displaying articles -->
+{{!-- {{> projects post}} --}}
+
+<!-- displaying form and comments-->
+<!-- only display if logged in -->
+{{!-- {{#if loggedIn}} --}}
+
+
+
+<div class="container premiere">
+    <div class="row">
+        <div class="col-lg-6 display">
+            <h2>{{title}}</h2>
+            <section class="player">
+                <iframe width="760" height="515" src="{{media_link}}" title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </section>
+            <h4> Created {{projects_date}}</h4>
+            <h2 class="display-user">Created by {{users.username}}</h2>
+
+            <p>{{description}}
+            </p>
+            <br><br><br>
+
+        </div>
+        <div class="col-lg-6 comments">
+            <section class="comment-title">
+
+                <h2>COMMENTS</h2>
+            </section>
+
+            {{!-- ? MAKE THIS SCROLLABLE --}}
+            <div class="comment-scroll">
+                {{> comments projects.comments}}
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+
+
+{{!--
+{{#if loggedIn}}
+<script src="../public/js/comments.js"></script>
+{{/if}} --}}
