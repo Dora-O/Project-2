@@ -1,4 +1,4 @@
-const Users = require('./Users');
+const Users = require('./users');
 const Projects = require('./Projects');
 const Comments = require('./Comments');
 const Emailer = require('./Emailer');
