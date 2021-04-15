@@ -25,5 +25,5 @@ const signupFormHandler = async (event) => {
 
 // Event Listener
 document
-  .querySelector('.login-card')
+  .querySelector('.signup-card')
   .addEventListener('submit', signupFormHandler);
