@@ -7,7 +7,7 @@ router.get('/', async (req, res) => {
     try {
         const dbProjectsData = await Projects.findAll({
             include: [
-                {
+               /*  {
                     model: Projects,
                     attributes: [
                         'id',
@@ -17,7 +17,12 @@ router.get('/', async (req, res) => {
                         'post_content',
                         'post_date',
                     ],
-                },
+                }, */
+                {
+                    model: Comments,
+                    attributes: ['id', 'comment_content', 'projects_id', 'users_id',],
+                  },
+
                 {
                     model: Users,
                     attributes: [
