@@ -22,7 +22,7 @@ router.post('/', withAuth, async  (req, res) => {
 
 
 // UPDATE new projects
-  router.put('/:id', async (req, res) => {
+  router.put('/:id', withAuth, async (req, res) => {
     // update a project by its `id` value
     try {
       const projectData = await Project.update({
@@ -45,7 +45,7 @@ router.post('/', withAuth, async  (req, res) => {
 
 
 // DELETE PROJECT 
-  router.delete('/:id', async (req, res) => {
+  router.delete('/:id', withAuth, async (req, res) => {
     // delete a PROJECT by its `id` value
     try {
       const projectData = await Projects.destroy({
