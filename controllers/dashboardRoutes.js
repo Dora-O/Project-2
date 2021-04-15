@@ -8,16 +8,6 @@ router.get('/', async (req, res) => {
         const dbProjectsData = await Projects.findAll({
             include: [
                 {
-                    model: Projects,
-                    attributes: [
-                        'id',
-                        'title',
-                        'media_link',
-                        'description',
-                        'projects_date',
-                    ],
-                },
-                {
                     model: Comments,
                     attributes: ['id', 'comment_content', 'projects_id'],
                 },
@@ -77,11 +67,12 @@ router.get('/projects/:id', async (req, res) => {
 
 // CREATE Post on Dashboard
 router.get('/create', withAuth, async (req, res) => {
+    console.log(req.session.user_id)
     try {
         // Get all posts and JOIN with user data
         const projectsData = await Projects.findAll({
             where: {
-                user_id: req.session.user_id
+                users_id: req.session.user_id
             },
             include: [
                 {
@@ -97,7 +88,7 @@ router.get('/create', withAuth, async (req, res) => {
         // Serialize data so the template can read it
         const projects = projectsData.map((post) => post.get({ plain: true }));
         // Pass serialized data and session flag into template I will create
-        res.render('createProject', {
+        res.render('createProjects', {
             projects,
             logged_in: req.session.logged_in
         });

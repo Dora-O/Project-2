@@ -1,19 +1,34 @@
-<div class="menu-container">
-    <div class="card-header col-md-10">
-        <h2>
-            Projects
-        </h2>
-    </div>
-    <div>
-        <section class="card">
-            <a href="/projects/{{id}}">
-                <div class="card-body">
-                    <h5>Tile: {{title}}</h5>
-                    <h5>Description: {{description}}</h5>
-                    <h5>Date: {{date}} </h5>
-                </div>
-            </a>
-        </section>
-    </div>
+{{#if logged_in}}
+
+<div class="streams-title">
+    YOUR PROJECTS
 </div>
-</div>
+
+{{#if posts.length}}
+{{#each projects as |project| }}
+
+<a href="/api/projects/{{id}}" id="blog-name">
+    <div class="stream-card">
+        <div class="card-info">
+            <h2 class="title">
+                {{title}}
+            </h2>
+            <h3>By {{users.username}}</h3>
+
+            <p>{{description}}</p>
+            <p class="">Created on <span>{{projects_date}}</span></p>
+        </div>
+    </div>
+</a>
+{{/each}}
+{{/if}}
+
+{{else}}
+<h2>NO UPCOMING PROJECTS </h2>
+<br><br><br>
+
+{{/if}}
+
+<a href="/dashboard/create">
+    <h2 class="create-title"> CREATE NEW PROJECT </h2>
+</a>

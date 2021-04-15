@@ -64,7 +64,7 @@ router.get('/projects/:id', async (req, res) => {
         include: [
           {
             model: Comments,
-            attributes: ['id', 'comment_content', 'posts_id', 'users_id',],
+            attributes: ['id', 'comment_content', 'projects_id', 'users_id',],
           },
           {
             model: Users,
@@ -77,7 +77,7 @@ router.get('/projects/:id', async (req, res) => {
       const projects = projectsData.get({ plain: true });
   
         // pass data to template
-      res.render('project', {
+      res.render('premierePage', {
         ...projects,
         logged_in: req.session.logged_in
       });

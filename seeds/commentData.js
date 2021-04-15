@@ -13,6 +13,11 @@ const commentdata = [
     },
     {
         users_id: '3',
+        projects_id: '2',
+        comment_content: 'Coolest Video Ever',
+    },
+    {
+        users_id: '3',
         projects_id: '1',
         comment_content: 'What dependencies do I need to install?',
     },

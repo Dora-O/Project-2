@@ -2,18 +2,18 @@
 
 <div class="streams-title">
 
-    UPCOMING STREAMS
+    UPCOMING PREMIERES
 
 </div>
 {{#each projects as |project| }}
 
-<a href="/api/projects/{{id}}" id="blog-name">
+<a href="/projects/{{id}}" id="blog-name">
     <div class="stream-card">
         <div class="card-info">
             <h2 class="title">
                 {{title}}
             </h2>
-            <h3>By {{username}}</h3>
+            <h3>By {{users.username}}</h3>
 
             <p>{{description}}</p>
             <p class="">Created on <span>{{projects_date}}</span></p>

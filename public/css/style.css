@@ -9,12 +9,14 @@
     width: 100%;
     text-align: center;
   }
+
   h1 {
     font-family: 'Monoton', cursive;
     color: #eede06;
     font-size: 5rem;
     opacity: 0.8;
     width: 100%;
+   
   }
   
 h2 {
@@ -105,9 +107,9 @@ text-align: center;
 }
 
 .nav-bar {
-  /* flex: 1;
+  flex: 1;
   display: flex;
-  flex-direction: column; */
+  flex-direction: row; 
   align-items: center;
   justify-content: space-evenly;
   text-align: center;
@@ -117,21 +119,22 @@ text-align: center;
     rgba(253, 1, 232, 0.3)
   );
   border-radius: 2rem  2rem 0rem 0rem;
-  margin-bottom: 3rem;
-  max-height: 6rem;
- 
-/*   position:fixed; */
+  margin: .0rem auto  3rem auto;
+  height: 8rem;
 }
 
 .nav-items{
-  margin: 2rem 2rem 2rem 4rem;
+margin: auto;
   text-align: center;
+ 
+
 }
 
 .nav-item{
-  float: left;
-  position: relative;
-  margin-left: 2rem;
+   float: left;
+  position:relative ;
+ margin: auto 1rem;
+  display: inline;
 }
 
 h1:hover{
@@ -161,7 +164,7 @@ h1:hover{
     rgba(253, 1, 232, 0.3)
   ); */
   border-radius: 2rem  2rem 0rem 0rem;
-  margin: 12rem auto 5rem auto;
+  margin: 8rem auto 5rem auto;
 }
 
 
@@ -403,7 +406,8 @@ background: linear-gradient(to right top, #fceb00, #f5ea8b);
   width: 70%;
   height: 40px;
   border: 2px solid #cccccc;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
+  margin-top: 3rem;
 }
 
 
@@ -411,6 +415,9 @@ background: linear-gradient(to right top, #fceb00, #f5ea8b);
 .login-button{
    display: inline-block;
    margin-left: 1rem;
+   background: none;
+   outline: none;
+   border: none;
 }
 
 .login-button h2:hover{
@@ -475,13 +482,17 @@ textarea:focus, input:focus{
   height: 40px;
   border: 2px solid #cccccc;
   margin-bottom: 2rem;
+  margin-top: 2rem;
 }
 
 
 
 .signup-button{
-   display: inline-block;
-   margin-left: 1rem;
+  display: inline-block;
+  margin-left: 1rem;
+  background: none;
+  outline: none;
+  border: none;
 
 }
 .signup-button h2{
@@ -514,4 +525,87 @@ input[type=password] {
 
 textarea:focus, input:focus{
   outline: none;
+}
+
+
+
+.wrapper-signup{
+  width: 100%;
+  max-width: 900px;
+  padding: 30px;
+  height: 100%;
+  min-height: 35rem;
+  text-align: center;
+  margin: auto;
+ background-color: transparent;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+
+
+
+
+
+
+
+
+/* SIGN UP PAGE */
+
+.premiere{
+margin:auto;
+  width: 100%;
+  height: 100%;
+  min-height: 25rem;
+  padding: 2rem;
+  margin-top: -6rem;
+
+}
+
+
+.display{
+background: transparent;
+width: 60%;
+background: linear-gradient(to right top, #2ad4ff, #d9ff93);
+border-radius: 2rem;
+z-index: 2;
+float: left;
+margin-bottom: 5rem ;
+
+}
+
+
+.display h2{
+margin-bottom: .4rem;
+text-transform: uppercase ;
+}
+
+
+.display-user{
+  color: #fffb0f;
+
+  }
+
+.comments{
+  width: 37%;
+  background: linear-gradient(to right top, #fca90e, #a3ffc6);
+float: left;
+overflow: auto;
+
+border-radius:1rem;
+z-index: 2;
+margin-left:  1.5rem;
+margin-bottom: 5rem ; 
+min-height: 50rem;
+}
+
+.comment-title{
+line-height: 6rem;
+margin-bottom: 3rem;
+}
+
+.comment-scroll{
+  overflow-x: scroll;
+  min-height: 45rem;
+
 }
