@@ -1,6 +1,6 @@
 const signupFormHandler = async (event) => {
   event.preventDefault();
-
+  console.log('signup')
   // Collect sign up form values
   const name = document.querySelector('#name-signup').value.trim();
   const username = document.querySelector('#username-signup').value.trim();
@@ -25,6 +25,6 @@ const signupFormHandler = async (event) => {
 
 // Event Listener
 document
-  .querySelector('.signup-card')
+  .querySelector('.signup-form')
   .addEventListener('submit', signupFormHandler);
 

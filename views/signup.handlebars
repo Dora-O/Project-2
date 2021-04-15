@@ -1,43 +1,31 @@
-<div class="login-card">
-    <h2 class="signup-title"> CREATE ACCOUNT</h2>
-    <form class="form signup-form">
-        <div class="form-group">
-            <label for="name-signup">
-                <h2>NAME</h2>
-            </label> <br>
-            <input class="form-input" type="text" id="name-signup" onfocus="this.value=''" />
-        </div>
-        <div class="form-group">
-            <label for="username-signup">
-                <h2>USERNAME</h2>
-            </label> <br>
-            <input class="form-input" type="text" id="username-signup" onfocus="this.value=''" />
-        </div>
-        <div class="form-group">
-            <label for="email-signup">
-                <h2>EMAIL</h2>
-            </label> <br>
-            <input class="form-input" type="text" id="email-signup" onfocus="this.value=''" />
-        </div>
-        <div class="form-group">
-            <label for="password-signup">
-                <h2>PASSWORD</h2>
-            </label> <br>
-            <input class="form-input" type="password" id="password-signup" onfocus="this.value=''" />
-        </div>
-        <br>
-        <a href="/signup">
-            <div class="signup-button button" type="submit">
-                <h2>SIGN UP</h2>
-            </div>
-        </a>
-        <a href="/login">
-            <div class="signup-button button" type="submit">
-                <h2>LOG IN</h2>
-            </div>
-        </a>
+<div class="wrapper">
+  <div class="col-md-6">
+    <h2>Signup</h2>
 
+    <form class="form signup-form">
+      <div class="form-group">
+        <label for="name-signup">name:</label>
+        <input class="form-input" type="text" id="name-signup" />
+      </div>
+      <div class="form-group">
+        <label for="username-signup">username:</label>
+        <input class="form-input" type="text" id="username-signup" />
+      </div>
+      <div class="form-group">
+        <label for="email-signup">email:</label>
+        <input class="form-input" type="text" id="email-signup" />
+      </div>
+      <div class="form-group">
+        <label for="password-signup">password:</label>
+        <input class="form-input" type="password" id="password-signup" />
+      </div>
+      <div class="form-group">
+        <button class="btn btn-primary" type="submit">signup</button>
+      </div>
     </form>
+  </div>
 </div>
 
-<script scr="./js/signup.js"></script>
+
+
+<script src="./js/signup.js"></script>
