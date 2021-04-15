@@ -7,21 +7,20 @@ router.get('/', async (req, res) => {
     try {
         const dbProjectsData = await Projects.findAll({
             include: [
-               /*  {
+                {
                     model: Projects,
                     attributes: [
                         'id',
                         'title',
                         'media_link',
-                        'exhibition_date',
-                        'post_content',
-                        'post_date',
+                        'description',
+                        'projects_date',
                     ],
-                }, */
+                },
                 {
                     model: Comments,
-                    attributes: ['id', 'comment_content', 'projects_id', 'users_id',],
-                  },
+                    attributes: ['id', 'comment_content', 'projects_id'],
+                },
 
                 {
                     model: Users,
@@ -59,10 +58,9 @@ router.get('/projects/:id', async (req, res) => {
                         'id',
                         'title',
                         'media_link',
-                        'exhibition_date',
-                        'post_content',
-                        'post_date',
-
+                        'description',
+                        'projects_date',
+                        'users_id'
                     ],
                 },
             ],
@@ -88,7 +86,7 @@ router.get('/create', withAuth, async (req, res) => {
             include: [
                 {
                     model: Comments,
-                    attributes: ['id', 'comment_content', 'posts_id', 'users_id',],
+                    attributes: ['id', 'comment_content', 'projects_id', 'date'],
                 },
                 {
                     model: Users,
@@ -99,7 +97,7 @@ router.get('/create', withAuth, async (req, res) => {
         // Serialize data so the template can read it
         const projects = projectsData.map((post) => post.get({ plain: true }));
         // Pass serialized data and session flag into template I will create
-        res.render('dashboard', {
+        res.render('createProject', {
             projects,
             logged_in: req.session.logged_in
         });
