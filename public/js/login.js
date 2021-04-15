@@ -25,3 +25,27 @@ const loginFormHandler = async (event) => {
 document
   .querySelector('.login-form')
   .addEventListener('submit', loginFormHandler);
+
+
+
+
+
+  function showdiv()
+  {
+    document.getElementById("welcome-box").style.visibility="visible";
+  }
+  setTimeout("showdiv()",1000);
+
+
+  function hidediv()
+  {
+    document.getElementById("welcome-box").style.visibility="hidden";
+  }
+  setTimeout("hidediv()",13000);
+
+
+  function showLogdiv()
+  {
+    document.getElementById("log-in-box").style.visibility="visible";
+  }
+  setTimeout("showLogdiv()",13300);
