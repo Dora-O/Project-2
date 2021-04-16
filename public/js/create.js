@@ -1,12 +1,14 @@
 const newFormHandler = async (event) => {
     event.preventDefault();
 
-    const new_project = document.querySelector('#new-project').value.trim();
+    const projectTitle = document.querySelector('#project-title').value.trim();
+    const mediaLink = document.querySelector('#media-link').value.trim();
+    const projectDesc = document.querySelector('#project-desc').value.trim();
 
-    if (new_project) {
+    if (projectTitle && mediaLink && projectDesc) {
         const response = await fetch(`/api/projects`, {
             method: 'POST',
-            body: JSON.stringify({ new_project }),
+            body: JSON.stringify({ projectTitle, mediaLink, projectDesc }),
             headers: { 'Content-Type': 'application/json', },
         });
         if (response.ok) {
