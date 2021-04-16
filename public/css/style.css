@@ -263,6 +263,8 @@ background: linear-gradient(to right top, #fceb00, #f5ea8b);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  width: 60%;
+  margin: auto;
 }
 
 
@@ -394,7 +396,10 @@ background: linear-gradient(to right top, #fceb00, #f5ea8b);
 
 .login-form h2{
   color: white;
-  font-size: 3rem;
+  font-size: 4rem;
+  display: inline-block;
+  font-weight: 900;
+  text-shadow: black -2px 2px ;
 }
 
 .login-form label{
@@ -418,7 +423,16 @@ background: linear-gradient(to right top, #fceb00, #f5ea8b);
    background: none;
    outline: none;
    border: none;
+   
 }
+.login-button h2{
+font-size: 5rem;
+   font-weight: 900;
+ 
+   text-shadow: black -2px 2px ;
+   
+}
+
 
 .login-button h2:hover{
   color: #fbff00;
@@ -455,7 +469,7 @@ textarea:focus, input:focus{
 
 
 .signup-title{
-  font-size: 4.2rem;
+  font-size: 6rem;
   font-weight: bold;
   color: rgb(25, 228, 255);
   margin-bottom: 1rem;
@@ -478,7 +492,7 @@ textarea:focus, input:focus{
 }
 
 .signup-form input{
-  width: 70%;
+  width: 50%;
   height: 40px;
   border: 2px solid #cccccc;
   margin-bottom: 2rem;
@@ -497,6 +511,8 @@ textarea:focus, input:focus{
 }
 .signup-button h2{
   color: rgb(25, 228, 255);
+  font-size: 4rem;
+  font-weight: 900;
 }
 
 .signup-button h2:hover{
@@ -512,6 +528,7 @@ input[type=text] {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 600;
   text-transform: uppercase;
+  text-align: center;
 }
 
 input[type=password] {
@@ -550,7 +567,7 @@ textarea:focus, input:focus{
 
 
 
-/* SIGN UP PAGE */
+/* PREMIERE PAGE */
 
 .premiere{
 margin:auto;
@@ -606,7 +623,7 @@ margin-bottom: 3rem;
 
 .comment-scroll{
   overflow-x: scroll;
-  min-height: 48rem;
+  min-height: 55rem;
 
 }
 .comment-form{
@@ -658,3 +675,95 @@ margin-bottom: 3rem;
     color: yellow;
 
   }
+
+
+
+
+
+
+
+/* CREATE PAGE */
+.create-form h2{
+  color: rgb(247, 40, 202);
+  font-size: 3rem;
+}
+
+
+.create-button{
+ margin: auto;
+  background: none;
+  outline: none;
+  border: none;
+
+}
+.create-button h2{
+  color: rgb(25, 228, 255);
+  font-size: 5rem;
+  font-weight: 900;
+}
+
+.create-button h2:hover{
+  color: #fbff00;
+}
+
+
+.create-form label{
+  line-height: 2rem;
+  margin-bottom: -.5rem;
+}
+
+.create-form input{
+  width: 70%;
+ 
+  margin-bottom: 3rem;
+  margin-top: 3rem;
+}
+
+
+
+/* EMAILER PAGE */
+
+
+.email-form h2{
+  color: rgb(247, 40, 202);
+  font-size: 3rem;
+}
+
+.email-form p{
+ 
+  font-size: 1.5rem;
+  margin-top: -2rem;
+  margin-bottom: 1rem;
+}
+
+
+
+.emailer-button{
+ margin: auto;
+  background: none;
+  outline: none;
+  border: none;
+
+}
+.emailer-button h2{
+  color: rgb(25, 228, 255);
+  font-size: 5rem;
+  font-weight: 900;
+}
+
+.emailer-button h2:hover{
+  color: #fbff00;
+}
+
+
+.email-form label{
+  line-height: 2rem;
+  margin-bottom: -.5rem;
+}
+
+.email-form input{
+  width: 70%;
+ 
+  margin-bottom: 3rem;
+  margin-top: 3rem;
+}

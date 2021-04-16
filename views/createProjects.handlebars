@@ -1,24 +1,32 @@
 <div class="card">
     <div class="card-header">
     </div>
-    <form class="form card-body" id="new-project-form">
+    <form class="form card-body create-form" id="new-project-form">
         {{!-- Title --}}
         <div class="form-group">
-            <label for="project-title" class="form-label">Project Title:</label>
+            <label for="project-title" class="form-label">
+                <h2>PROJECT TITLE</h2>
+            </label>
             <input class="form-input" type="text" id="project-title" name="project-title" />
         </div>
         {{!-- Media Link --}}
         <div class="form-group">
-            <label for="media-link" class="form-label">Media Link:</label>
+            <label for="media-link" class="form-label">
+                <h2>MEDIA LINK</h2>
+            </label>
             <input class="form-input" type="text" id="media-link" name="media-link" />
         </div>
         {{!-- Description --}}
         <div class="form-group">
-            <label for="project-desc" class="form-label">Description:</label>
+            <label for="project-desc" class="form-label">
+                <h2>PROJECT DESCRIPTION</h2>
+            </label>
             <input class="form-input" type="text" id="project-desc" name="project-desc" />
         </div>
         {{!-- Create Button --}}
-        <button type="submit" class="btn btn-primary">Create</button>
+        <button type="submit" class="btn btn-primary create-button">
+            <h2>CREATE</h2>
+        </button>
     </form>
 </div>
 
