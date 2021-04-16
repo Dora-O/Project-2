@@ -67,15 +67,16 @@ router.get('/projects/:id', async (req, res) => {
             include: [
                 {
                     model: Projects,
-                    attributes: [
-                        'id',
-                        'title',
-                        'media_link',
-                        'description',
-                        'projects_date',
-                        'users_id'
-                    ],
+                    attributes: ['id','title','media_link','description','projects_date','users_id'
+                    ], include: {
+                            model: Users,
+                            attributes: ['username', 'name']
+                          }
                 },
+                {
+                    model: Users,
+                    attributes: ['username', 'name']
+                  }
             ],
         });
 

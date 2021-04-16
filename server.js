@@ -17,7 +17,7 @@ const sess = {
     secret: 'Exclusive Drop',
     cookie: {
         // Session will automatically expire in 10 minutes
-        expires: 1 * 60 * 1000 
+        expires: 5 * 60 * 1000 
     },
     resave: true,
     rolling: true,
