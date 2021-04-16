@@ -37,6 +37,7 @@ router.get('/', async (req, res) => {
       // Serialize data so the template can read it
       const projects = projectData.map((post) => post.get({ plain: true }));
   
+      res.render('dashboard')
     } catch (err) {
       console.log(err);
       res.status(500).json(err);
@@ -50,9 +51,9 @@ router.post('/', withAuth, async (req, res) => {
   try {
     //collects the project data
     const projectsData = await Projects.create({
-      projectTitle: req.body.projectTitle,
-      projectDesc: req.body.projectDesc,
-      mediaLink: req.session.mediaLink
+      title: req.body.title,
+      description: req.body.description,
+      media_link: req.body.media_link
     });
 
     res.status(200).json(projectsData);

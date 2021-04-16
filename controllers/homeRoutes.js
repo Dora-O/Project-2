@@ -26,7 +26,7 @@ router.get('/', async (req, res) => {
       // Pass serialized data and session flag into template I will create
       res.render('homepage', { 
         projects, 
-        logged_in: req.session.logged_in 
+        loggedIn: req.session.loggedIn 
       });
     } catch (err) {
       console.log(err);
@@ -79,7 +79,7 @@ router.get('/projects/:id', async (req, res) => {
         // pass data to template
       res.render('premierePage', {
         ...projects,
-        logged_in: req.session.logged_in
+        loggedIn: req.session.loggedIn
       });
     } catch (err) {
       res.status(500).json(err);
