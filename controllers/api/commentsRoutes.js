@@ -1,13 +1,48 @@
 const router = require('express').Router();
-const { User } = require('../../models');
+const { Comments } = require('../../models');
+const withAuth = require('../../utils/auth');
+
+
+
+router.get('/', async (req, res) => {
+    try {
+        // Get all posts and JOIN with user data
+        const dbCommentData = await Comments.findAll({
+          attributes: [
+            'id',
+            ' users_id',
+            'projects_id',
+            'comment_content',
+            'date',
+  
+        ],
+        });
+    
+        // Serialize data so the template can read it
+        const comment = dbCommentData.map((post) => post.get({ plain: true }));
+    
+/* 
+      // Pass serialized data and session flag into template I will create
+      res.render('comments', { 
+        projects, 
+        logged_in: req.session.logged_in 
+      });
+ */
+      } catch (err) {
+        console.log(err);
+        res.status(500).json(err);
+      }
+    
+  });
+  
 
 
 // CREATE comment
-router.post('/', async (req, res) => {
+router.post('/', withAuth, async (req, res) => {
     try {
         const dbCommentData = await Comments.create({
-            project: req.body.projects_id,
-            comment: req.body.comment_content,
+            projects_id: req.body.projects_id,
+            comment_content: req.body.comment_content,
         });
 
         // Set up sessions with a 'loggedIn' variable set to `true`

@@ -1,34 +1,48 @@
 const router = require('express').Router();
-const { Projects, Users } = require('../../models');
+const { Projects, Users, Comments } = require('../../models');
 const withAuth = require('../../utils/auth');
 
 
 
-/* 
-
 // Get Projects
 router.get('/', async (req, res) => {
-  // update a project by its `id` value
   try {
-    const projectsData = await Project.update({
-      title: req.body.title,
-      description: req.body.description,
-    }, {
-      where: {
-        id: req.params.id,
-      },
-    });
-    if (!projectsData[0]) {
-      res.status(404).json({ message: 'No information was sent, try again' });
-      return;
+      // Get all posts and JOIN with user data
+      const projectData = await Projects.findAll({
+        attributes: [
+          'id',
+          'title',
+          'media_link',
+          'description',
+          'projects_date',
+          'users_id',
+
+      ],
+        include: [
+          {
+            model: Comments,
+            attributes: ['id', 'comment_content', 'projects_id', 'users_id',],
+            include: {
+              model: Users,
+              attributes: ['username', 'name']
+            }
+          },
+          {
+            model: Users,
+            attributes: ['username', 'name']
+          },
+        ],
+      });
+  
+      // Serialize data so the template can read it
+      const projects = projectData.map((post) => post.get({ plain: true }));
+  
+    } catch (err) {
+      console.log(err);
+      res.status(500).json(err);
     }
-    res.status(200).json(projectsData);
-  } catch (err) {
-    res.status(500).json(err);
-  }
-}); */
-
-
+  
+});
 
 
 // CREATE new project
