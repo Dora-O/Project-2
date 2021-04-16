@@ -96,7 +96,7 @@ router.get('/create', withAuth, async (req, res) => {
         // Get all posts and JOIN with user data
         const projectsData = await Projects.findAll({
             where: {
-                users_id: req.session.user_id
+                users_id: req.session.users_id
             },
             include: [
                 {
@@ -114,7 +114,7 @@ router.get('/create', withAuth, async (req, res) => {
         // Pass serialized data and session flag into template I will create
         res.render('createProjects', {
             projects,
-            logged_in: req.session.logged_in
+            loggedIn: req.session.loggedIn
         });
     } catch (err) {
         console.log(err);
