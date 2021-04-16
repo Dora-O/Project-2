@@ -6,7 +6,7 @@ const nodemailer = require('nodemailer');
 router.get('/', async (req, res) => {
   try {
     res.render('emailer', {  
-      logged_in: req.session.loggedIn 
+      loggedIn: req.session.loggedIn 
     });
     } catch (err) {
       console.log(err);

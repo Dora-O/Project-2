@@ -29,7 +29,7 @@ document
 
 
 
-
+/* 
   function showdiv()
   {
     document.getElementById("welcome-box").style.visibility="visible";
@@ -49,3 +49,4 @@ document
     document.getElementById("log-in-box").style.visibility="visible";
   }
   setTimeout("showLogdiv()",13300);
+ */
