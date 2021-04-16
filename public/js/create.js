@@ -1,15 +1,15 @@
 const addNewProject = async (event) => {
     event.preventDefault();
 
-    const title = document.querySelector('#project-title-input').value.trim();
-    const media_link= document.querySelector('#media-link-input').value.trim();
-    const description = document.querySelector('#project-desc-input').value.trim();
+    const projectTitle = document.querySelector('#project-title').value.trim();
+    const mediaLink= document.querySelector('#media-link').value.trim();
+    const projectDesc = document.querySelector('#project-desc').value.trim();
 
-    if (title && media_link && description) {
+    if (projectTitle && mediaLink && projectDesc) {
         const response = await fetch(`/api/projects`, {
 
             method: 'POST',
-            body: JSON.stringify({ title, media_link, description }),
+            body: JSON.stringify({ projectTitle, mediaLink, projectDesc }),
             headers: { 'Content-Type': 'application/json', },
         });
         if (response.ok) {
@@ -19,4 +19,6 @@ const addNewProject = async (event) => {
         }
     }
 };
+
+console.log('this works')
 document.querySelector('#new-project-form').addEventListener('submit', addNewProject);
