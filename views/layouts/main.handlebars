@@ -53,13 +53,14 @@
                         </div>
                         <div class="col-lg-2 nav-item">
                             <a href="/login" id="logout"> <img class="nav-logo"
-                                    src="https://img.icons8.com/nolan/96/delete-sign.png" alt="Dashboard"></a>
+                                    src="https://img.icons8.com/nolan/96/delete-sign.png" alt="log out"></a>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="container body">
                 <div class="row">
+                    <button id="logout" class="button is-danger">logout</button>
 
                     {{{body}}}
                 </div>
@@ -70,9 +71,10 @@
     </main>
     <div class="circle1"></div>
     <div class="circle2"></div>
+
+    <script src="/public/js/logout.js"></script>
 </body>
 
 </html>
-
-<script src="./js/login.js"></script>
-<script src="./js/logout.js"></script>
+{{!--
+<script src="./js/login.js"></script> --}}

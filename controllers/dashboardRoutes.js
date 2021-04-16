@@ -1,11 +1,18 @@
 const router = require('express').Router();
+const sequelize = require('../config/connection');
 const { Projects, Users, Comments } = require('../models');
 const withAuth = require('../utils/auth');
 
 // GET all Projects for Dashboard
 router.get('/', async (req, res) => {
+ 
     try {
         const dbProjectsData = await Projects.findAll({
+           
+             where: {
+                // use the ID from the session
+                users_id: req.session.users_id
+              }, 
             include: [
                 {
                     model: Comments,
@@ -23,13 +30,29 @@ router.get('/', async (req, res) => {
             ],
         });
 
-        const projects = dbProjectsData.map((project) =>
-            project.get({ plain: true })
+        const loggedInUser = await Users.findByPk(
+            req.session.users_id
+        )
+
+        console.log(loggedInUser);
+
+        const projects = dbProjectsData.map((project) =>  project.get({ plain: true })
         );
+
+
+
+
+       /*  const projects = dbProjectsData.map((project) =>
+            project.get({ plain: true })
+        ); */
         // Send over the 'loggedIn' session variable to the 'Dashboard' template
+        console.log(req.session);
         res.render('dashboard', {
             projects,
             loggedIn: req.session.loggedIn,
+            users : {
+                username: loggedInUser.username
+            }
         });
     } catch (err) {
         console.log(err);

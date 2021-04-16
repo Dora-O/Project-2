@@ -3,7 +3,6 @@ const { Projects, Users, Comments } = require('../../models');
 const withAuth = require('../../utils/auth');
 
 
-
 // Get Projects
 router.get('/', async (req, res) => {
   try {
