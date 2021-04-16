@@ -1,7 +1,7 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
- 
-class Projects extends Model{}
+
+class Projects extends Model { }
 
 Projects.init(
   {
@@ -14,20 +14,20 @@ Projects.init(
     title: {
       type: DataTypes.STRING,
       allowNull: false,
-  },
-    media_link:{
+    },
+    media_link: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    description:{
+    description: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    projects_date:{
+    projects_date: {
       type: DataTypes.DATE,
       allowNull: false,
       defaultValue: DataTypes.NOW,
-    },  
+    },
     users_id: {
       type: DataTypes.INTEGER,
       references: {
@@ -36,12 +36,12 @@ Projects.init(
       },
     },
   },
-{
-  sequelize,
-  freezeTableName: true,
-  underscored: true,
-  modelName: 'projects',
-}
+  {
+    sequelize,
+    freezeTableName: true,
+    underscored: true,
+    modelName: 'projects',
+  }
 );
 
 module.exports = Projects;
