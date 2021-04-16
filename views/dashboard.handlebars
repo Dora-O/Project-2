@@ -1,13 +1,13 @@
-{{#if logged_in}}
+<h2>Hello, {{users.username}}</h2>
 
 <div class="streams-title">
     YOUR PROJECTS
 </div>
 
-{{#if posts.length}}
+{{#if projects.length}}
 {{#each projects as |project| }}
 
-<a href="/api/projects/{{id}}" id="blog-name">
+<a href="projects/{{id}}" id="blog-name">
     <div class="stream-card">
         <div class="card-info">
             <h2 class="title">
@@ -21,7 +21,7 @@
     </div>
 </a>
 {{/each}}
-{{/if}}
+
 
 {{else}}
 <h2>NO UPCOMING PROJECTS </h2>
