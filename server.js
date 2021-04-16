@@ -15,8 +15,12 @@ const hbs = exphbs.create({ helpers });
 
 const sess = {
     secret: 'Exclusive Drop',
-    cookie: {},
-    resave: false,
+    cookie: {
+        // Session will automatically expire in 10 minutes
+        expires: 5 * 60 * 1000 
+    },
+    resave: true,
+    rolling: true,
     saveUninitialized: true,
     store: new SequelizeStore({
         db: sequelize
