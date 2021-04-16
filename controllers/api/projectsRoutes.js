@@ -50,9 +50,9 @@ router.post('/', withAuth, async (req, res) => {
   try {
     //collects the project data
     const projectsData = await Projects.create({
-      title: req.body.title,
-      description: req.body.description,
-      user_id: req.session.user_id
+      projectTitle: req.body.projectTitle,
+      projectDesc: req.body.projectDesc,
+      mediaLink: req.session.mediaLink
     });
 
     res.status(200).json(projectsData);
