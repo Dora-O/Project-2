@@ -1,21 +1,15 @@
-<!-- displaying articles -->
-{{!-- {{> projects post}} --}}
-
-<!-- displaying form and comments-->
-<!-- only display if logged in -->
-{{!-- {{#if loggedIn}} --}}
-
-
+{{#if loggedIn}}
 
 <div class="container premiere">
     <div class="row">
         <div class="display">
             <h2>{{title}}</h2>
             <section class="player">
-                <iframe width="760" height="515" src="{{media_link}}" title="YouTube video player" frameborder="0"
+                <iframe width="960" height="615" src="{{media_link}}" title="YouTube video player" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen></iframe>
             </section>
+            
             <h4> Created on: {{format_date projects_date}}</h4>
             <h2 class="display-user">Created by {{users.username}}</h2>
 
@@ -57,7 +51,20 @@
 
 
 
+{{else}}
+<h2>MUST BE LOGGED IN TO WATCH </h2>
+<h2>"{{title}}"</h2>
+<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">
+    <img src="https://media0.giphy.com/media/5PhDDTC8lME8xi9Bcv/giphy.gif" "
+        alt=" Repo">
+    <br><br><br><br>
+    <a href="/login">
+        <h2 class="error-title"> LOG IN HERE </h2>
+    </a>
 
-{{#if loggedIn}}
-<script src="./js/comments.js"></script>
-{{/if}}
+    <br>
+    {{/if}}
+
+    {{#if loggedIn}}
+    <script src="./js/comments.js"></script>
+    {{/if}}

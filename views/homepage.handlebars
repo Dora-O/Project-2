@@ -13,7 +13,6 @@
             <h2 class="title">
                 {{title}}
             </h2>
-            <h3>By {{users.username}}</h3>
 
             <p>{{description}}</p>
             <p class="">Created on <span>{{format_date projects_date}}</span></p>
@@ -22,7 +21,21 @@
 </a>
 {{/each}}
 
-<a href="/api/create">
+<a href="/dashboard/create">
     <h2 class="create-title"> CREATE NEW PROJECT </h2>
 </a>
+
+
+{{else}}
+<h2>MUST BE LOGGED IN TO SEE PROJECTS</h2>
+<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">
+    <img src="https://media0.giphy.com/media/5PhDDTC8lME8xi9Bcv/giphy.gif" "
+        alt=" Repo">
+</a>
+<br><br><br><br>
+<a href="/login">
+    <h2 class="error-title"> LOG IN HERE </h2>
+</a>
+
+<br>
 {{/if}}

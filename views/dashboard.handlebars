@@ -1,3 +1,4 @@
+{{#if loggedIn}}
 <h2>Hello, {{users.username}}</h2>
 
 <div class="streams-title">
@@ -13,7 +14,7 @@
             <h2 class="title">
                 {{title}}
             </h2>
-            <h3>By {{username}}</h3>
+            {{!-- <h3>By {{username}}</h3> --}}
 
             <p>{{description}}</p>
             <p class="">Created on <span>{{format_date projects_date}}</span></p>
@@ -24,11 +25,25 @@
 
 
 {{else}}
-<h2>NO UPCOMING PROJECTS </h2>
+<h2>YOU HAVE NO UPCOMING PROJECTS </h2>
 <br><br><br>
-
+<a href="https://github.com/Dora-O/Project-2" target="_blank">
+    <img src="https://media0.giphy.com/media/5PhDDTC8lME8xi9Bcv/giphy.gif" style="width: 300px; margin-top:-3rem;"
+        alt="Repo">
+</a>
 {{/if}}
 
 <a href="/dashboard/create">
     <h2 class="create-title"> CREATE NEW PROJECT </h2>
 </a>
+
+{{else}}
+<h2>MUST BE LOGGED IN TO SEE PROJECTS</h2>
+<a href="https://github.com/Dora-O/Project-2">
+    <img src="https://media0.giphy.com/media/5PhDDTC8lME8xi9Bcv/giphy.gif" alt="">
+</a>
+<br><br><br><br>
+<a href="/login">
+    <h2 class="error-title"> LOG IN HERE </h2>
+</a>
+{{/if}}
