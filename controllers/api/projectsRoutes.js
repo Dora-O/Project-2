@@ -2,45 +2,48 @@ const router = require('express').Router();
 const { Projects, Users, Comments } = require('../../models');
 const withAuth = require('../../utils/auth');
 
-// // Get Projects
-// router.get('/', async (req, res) => {
-//   try {
-//     // Get all posts and JOIN with user data
-//     const projectData = await Projects.findAll({
-//       attributes: [
-//         'id',
-//         'title',
-//         'media_link',
-//         'description',
-//         'projects_date',
-//         'users_id',
 
-//       ],
-//       include: [
-//         {
-//           model: Comments,
-//           attributes: ['id', 'comment_content', 'projects_id', 'users_id',],
-//           include: {
-//             model: Users,
-//             attributes: ['username', 'name']
-//           }
-//         },
-//         {
-//           model: Users,
-//           attributes: ['username', 'name']
-//         },
-//       ],
-//     });
+// Get Projects
+router.get('/', async (req, res) => {
+  try {
+      // Get all posts and JOIN with user data
+      const projectData = await Projects.findAll({
+        attributes: [
+          'id',
+          'title',
+          'media_link',
+          'description',
+          'projects_date',
+          'users_id',
 
-//     // Serialize data so the template can read it
-//     const projects = projectData.map((post) => post.get({ plain: true }));
+      ],
+        include: [
+          {
+            model: Comments,
+            attributes: ['id', 'comment_content', 'projects_id', 'users_id',],
+            include: {
+              model: Users,
+              attributes: ['username', 'name']
+            }
+          },
+          {
+            model: Users,
+            attributes: ['username', 'name']
+          },
+        ],
+      });
+  
+      // Serialize data so the template can read it
+      const projects = projectData.map((post) => post.get({ plain: true }));
+  
+      res.render('dashboard')
+    } catch (err) {
+      console.log(err);
+      res.status(500).json(err);
+    }
+  
+});
 
-//   } catch (err) {
-//     console.log(err);
-//     res.status(500).json(err);
-//   }
-
-// });
 
 
 // CREATE new project
@@ -51,6 +54,7 @@ router.post('/', withAuth, async (req, res) => {
       title: req.body.projectTitle,
       description: req.body.projectDesc,
       media_link: req.session.mediaLink
+
     });
     req.session.save(() => {
 

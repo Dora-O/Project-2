@@ -7,8 +7,9 @@ const addNewProject = async (event) => {
 
     if (projectTitle && mediaLink && projectDesc) {
         const response = await fetch(`/dashboard/projects`, {
+
             method: 'POST',
-            body: JSON.stringify({ projectTitle, mediaLink, projectDesc }),
+            body: JSON.stringify({ title, media_link, description }),
             headers: { 'Content-Type': 'application/json', },
         });
         if (response.ok) {
