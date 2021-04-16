@@ -2,10 +2,24 @@
     <div class="card-header">
     </div>
     <form class="card-body" id="new-project-form">
-        <label for="new-project" class="form-label">Create a Project:</label>
-        <input class="form-input" type="text" id="new-project" name="new-project" />
-
+        {{!-- Title --}}
+        <div>
+        <label for="project-title" class="form-label">Project Title:</label>
+        <input class="form-input" type="text" id="project-title" name="project-title" />
+        </div>
+        {{!-- Media Link --}}
+        <div>
+        <label for="media-link" class="form-label">Media Link:</label>
+        <input class="form-input" type="text" id="media-link" name="media-link" />
+        </div>
+        {{!-- Description --}}
+        <div>
+        <label for="project-desc" class="form-label">Description:</label>
+        <input class="form-input" type="text" id="project-desc" name="project-desc" />
+        </div>
+        {{!-- Create Button --}}
         <button type="submit" class="btn btn-primary">Create</button>
     </form>
 </div>
+
 <script src="/public/js/create.js"></script>
