@@ -1,12 +1,12 @@
 const addNewProject = async (event) => {
     event.preventDefault();
 
-    const projectTitle = document.querySelector('#project-title-input').value.trim();
-    const mediaLink = document.querySelector('#media-link-input').value.trim();
-    const projectDesc = document.querySelector('#project-desc-input').value.trim();
+    const title = document.querySelector('#project-title-input').value.trim();
+    const media_link= document.querySelector('#media-link-input').value.trim();
+    const description = document.querySelector('#project-desc-input').value.trim();
 
-    if (projectTitle && mediaLink && projectDesc) {
-        const response = await fetch(`/dashboard/projects`, {
+    if (title && media_link && description) {
+        const response = await fetch(`/api/projects`, {
 
             method: 'POST',
             body: JSON.stringify({ title, media_link, description }),

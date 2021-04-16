@@ -46,28 +46,26 @@ router.get('/', async (req, res) => {
 
 
 
+
 // CREATE new project
 router.post('/', withAuth, async (req, res) => {
   try {
     //collects the project data
     const projectsData = await Projects.create({
-      title: req.body.projectTitle,
-      description: req.body.projectDesc,
-      media_link: req.session.mediaLink
-
+    
+      title: req.body.title,
+      description: req.body.description,
+      media_link: req.body.media_link
     });
-    req.session.save(() => {
 
-      req.session.project_id = projectsData.id;
-      res.status(200).json(projectsData);
-
-    })
+    res.status(200).json(projectsData);
 
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
   }
 });
+
 
 
 
