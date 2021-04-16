@@ -1,11 +1,4 @@
-<!-- displaying articles -->
-{{!-- {{> projects post}} --}}
-
-<!-- displaying form and comments-->
-<!-- only display if logged in -->
-{{!-- {{#if loggedIn}} --}}
-
-
+{{#if loggedIn}}
 
 <div class="container premiere">
     <div class="row">
@@ -17,7 +10,7 @@
                     allowfullscreen></iframe>
             </section>
             <h4> Created {{projects_date}}</h4>
-            <h2 class="display-user">Created by {{users.username}}</h2>
+            <h2 class="display-user"> Created By {{users.username}}</h2>
 
             <p>{{description}}
             </p>
@@ -57,6 +50,18 @@
 
 
 
+{{else}}
+<h2>MUST BE LOGGED IN TO WATCH </h2>
+<h2>"{{title}}"</h2>
+
+<img src="https://media0.giphy.com/media/5PhDDTC8lME8xi9Bcv/giphy.gif" alt="">
+<br><br><br><br>
+<a href="/login">
+    <h2 class="error-title"> LOG IN HERE </h2>
+</a>
+
+<br>
+{{/if}}
 
 {{#if loggedIn}}
 <script src="./js/comments.js"></script>

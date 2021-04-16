@@ -179,8 +179,22 @@ h1:hover{
 
 
 
+.error-title{
+  font-size: 4.5rem;
+  font-weight: bold;
+  color: rgba(99, 212, 247, 0.904);
+ /*  background: linear-gradient(to right top, #fffb04, #ff771c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; */
+ margin: -1rem auto;
+  border-radius: 2rem; 
+  max-width: 80%;
+}
 
+.error-title:hover{
+  color: yellow;
 
+}
 
 
 
