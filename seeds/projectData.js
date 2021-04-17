@@ -24,6 +24,7 @@ const projectdata = [
         media_link: 'https://www.youtube.com/embed/X9fLbfzCqWw',
         description: 'Music video by Yellowcard performing Ocean Avenue.',
         users_id: '3',
+        users_name: 'daddyRath'
     },
     {
         title: 'J. Balvin, Bad Bunny - CUIDAO POR AHÍ',
