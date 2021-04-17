@@ -1,6 +1,5 @@
 const { Model, DataTypes, EmptyResultError } = require('sequelize');
 const sequelize = require('../config/connection');
-const { create } = require('./Comments');
 
 class Comments extends Model { }
 
@@ -22,7 +21,6 @@ Comments.init(
     projects_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      defaultValue: create,
       references: {
         model: 'projects',
         key: 'id',
