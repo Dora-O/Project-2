@@ -10,7 +10,7 @@ router.get('/', async (req, res) => {
         const dbCommentData = await Comments.findAll({
           attributes: [
             'id',
-            ' users_id',
+            'users_id',
             'projects_id',
             'comment_content',
             'date',
@@ -44,12 +44,12 @@ router.post('/', withAuth, async (req, res) => {
         const dbCommentData = await Comments.create({
             projects_id: req.body.projects_id,
             comment_content: req.body.comment_content,
+            users_id: req.session.users_id,
         });
-
         // Set up sessions with a 'loggedIn' variable set to `true`
         req.session.save(() => {
             req.session.loggedIn = true;
-
+            // req.sessions.comments_id = dbCommentData.id;
             res.status(200).json(dbCommentData);
         });
     } catch (err) {
