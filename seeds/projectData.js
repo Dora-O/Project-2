@@ -2,10 +2,10 @@ const { Projects } = require('../models');
 
 const projectdata = [
     {
-        title: 'ReadMe Generator',
-        media_link: 'https://youtu.be/LJDEDQDcHeM',
-        description: 'How to install and use readme generator',
-        users_id: '1',
+        title: '블랙핑크 - How You Like That',
+        media_link: 'https://www.youtube.com/embed/ioNng23DkIM',
+        description: 'BlackPink 블랙핑크 performing How You Like That',
+        users_id: '4',
     },
     {
         title: 'TRAVIS SCOTT "FRANCHISE"',
@@ -14,15 +14,21 @@ const projectdata = [
         users_id: '2',
     },
     {
-        title: 'Team Profile Generator',
-        media_link: 'https://youtu.be/GQsDzlJ7brE',
-        description: 'How to install and use profile generator',
+        title: 'Justin Park - Bay to the City',
+        media_link: 'https://www.youtube.com/embed/45jP3y5ykSc',
+        description: 'Official music video by 5A Label',
+        users_id: '4',
+    },
+    {
+        title: 'Yellowcard - Ocean Avenue',
+        media_link: 'https://www.youtube.com/embed/X9fLbfzCqWw',
+        description: 'Music video by Yellowcard performing Ocean Avenue.',
         users_id: '3',
     },
     {
-        title: 'Team Profile Generator',
-        media_link: 'https://youtu.be/GQsDzlJ7brE',
-        description: 'How to install and use profile generator',
+        title: 'J. Balvin, Bad Bunny - CUIDAO POR AHÍ',
+        media_link: 'https://www.youtube.com/embed/zvAUZQxb0ME',
+        description: 'Official Music Video',
         users_id: '2',
     },
     
