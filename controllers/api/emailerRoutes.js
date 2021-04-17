@@ -18,16 +18,18 @@ router.get('/', async (req, res) => {
 router.post('/', async (req, res) => {
   try {
     const transporter = nodemailer.createTransport({
-      service: 'outlook',
-      host: "smtp.office365.com",
-      port: 587,
-      secure: false,
+      host: "smtp.gmail.com",
+      port: 465,
+      secure: true, // true for 465, false for other ports
       auth: {
-        user: 'premiereshow21@outlook.com',
-        pass: 'Welovemanny2021!'
+          user: process.env.EMAIL, // email you are using with nodemailer
+          pass: process.env.EMAIL_PASS, // email password
+          clientId: process.env.CLIENTID,
+          clientSecrect:process.env.CLIENTSECRET,
+          refreshToken: process.env.REFRESHTOK,
       },
-      tls: {
-        rejectUnauthorized: true
+      tls:{
+         rejectUnauthorized:false 
       },
 
       include: [
@@ -44,7 +46,7 @@ router.post('/', async (req, res) => {
     });
 
     const mailOptions = {
-      from: 'premiereshow2021@outlook.com',
+      from: req.body.EMAIL,
       to: req.body.to,
       subject: req.body.subject,
       text: req.body.content,
