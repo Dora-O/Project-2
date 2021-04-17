@@ -1,13 +1,12 @@
 const commentsFormHandler = async (event) => {
     event.preventDefault();
-    console.log('Your Comment was added')
-    const comment_text = document.querySelector('textarea[name="comment-body"]').value.trim();
+    const comment_content = document.querySelector('#comment_content').value.trim();
   
     const projects_id = window.location.toString().split('/')[
       window.location.toString().split('/').length - 1
     ];
   
-    if (comment_text) {
+    if (comment_content) {
         const response = await fetch('/api/comments', {
           method: 'POST',
           body: JSON.stringify({
@@ -20,11 +19,11 @@ const commentsFormHandler = async (event) => {
         });
       
         if (response.ok) {
-          document.location.reload();
+          document.location.reload('/');
         } else {
           alert(response.statusText);
         }
       }
   }
   
-  document.querySelector('.comment-form').addEventListener('submit', commentFormHandler);
+  document.querySelector('.comment-form').addEventListener('submit', commentsFormHandler);

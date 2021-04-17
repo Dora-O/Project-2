@@ -1,10 +1,11 @@
 const router = require('express').Router();
 const { Projects, Users, Comments } = require('../models');
+const withAuth = require('../utils/auth');
 
 //? HOMEPAGE DISPLAYS LOGGED IN USERS'S POSTS //
 
 //render homepage
-router.get('/', async (req, res) => {
+router.get('/', withAuth, async (req, res) => {
   try {
       // Get all posts and JOIN with user data
       const projectData = await Projects.findAll({
@@ -58,7 +59,7 @@ router.get('/signup', (req, res) => {
 
 
 //render posts by id
-router.get('/projects/:id', async (req, res) => {
+router.get('/projects/:id', withAuth, async (req, res) => {
   try {
       const projectsData = await Projects.findByPk(req.params.id, {
         include: [
