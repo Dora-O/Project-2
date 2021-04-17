@@ -11,6 +11,11 @@ Premiere is an application that allows a user to create a screening discussion b
 - Sequelize ORM
 
 ## Link to deployed site
-[Premiere Show](https://premiere-application1.herokuapp.com/)
+[Premiere Show](https://hidden-reaches-62484.herokuapp.com/)
 
 ## Screenshot of app
+<img scr = "https://user-images.githubusercontent.com/70343136/115121143-bc5b7600-9f76-11eb-8b7b-aab1d3842816.png">
+<img scr = "https://user-images.githubusercontent.com/70343136/115121059-52db6780-9f76-11eb-8e5f-75a1ed30c394.png">
+<img scr = "https://user-images.githubusercontent.com/70343136/115121062-553dc180-9f76-11eb-9eb0-37aac744d9ce.png">
+<img scr = "https://user-images.githubusercontent.com/70343136/115121065-566eee80-9f76-11eb-9899-2314e8a5e746.png">
+<img scr = "https://user-images.githubusercontent.com/70343136/115121068-5838b200-9f76-11eb-9bf8-d4fe38b3e173.png">
