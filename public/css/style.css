@@ -602,7 +602,7 @@ border-radius: 2rem;
 z-index: 2;
 float: left;
 margin-bottom: 5rem ;
-
+overflow: auto;
 }
 
 
