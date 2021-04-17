@@ -4,7 +4,7 @@ const { Projects, Users, Comments } = require('../models');
 const withAuth = require('../utils/auth');
 
 // GET all Projects for Dashboard
-router.get('/', async (req, res) => {
+router.get('/', withAuth, async (req, res) => {
  
     try {
         const dbProjectsData = await Projects.findAll({
@@ -61,17 +61,14 @@ router.get('/', async (req, res) => {
 });
 
 // GET one project
-router.get('/projects/:id', async (req, res) => {
+router.get('/projects/:id', withAuth, async (req, res) => {
     try {
         const dbProjectsData = await Projects.findByPk(req.params.id, {
             include: [
                 {
                     model: Projects,
                     attributes: ['id','title','media_link','description','projects_date','users_id'
-                    ], include: {
-                            model: Users,
-                            attributes: ['username', 'name']
-                          }
+                    ]
                 },
                 {
                     model: Users,
