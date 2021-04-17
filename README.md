@@ -14,8 +14,8 @@ Premiere is an application that allows a user to create a screening discussion b
 [Premiere Show](https://hidden-reaches-62484.herokuapp.com/)
 
 ## Screenshot of app
-<img scr = "https://user-images.githubusercontent.com/70343136/115121143-bc5b7600-9f76-11eb-8b7b-aab1d3842816.png">
-<img scr = "https://user-images.githubusercontent.com/70343136/115121059-52db6780-9f76-11eb-8e5f-75a1ed30c394.png">
-<img scr = "https://user-images.githubusercontent.com/70343136/115121062-553dc180-9f76-11eb-9eb0-37aac744d9ce.png">
-<img scr = "https://user-images.githubusercontent.com/70343136/115121065-566eee80-9f76-11eb-9899-2314e8a5e746.png">
-<img scr = "https://user-images.githubusercontent.com/70343136/115121068-5838b200-9f76-11eb-9bf8-d4fe38b3e173.png">
+![Screen Shot 2021-04-17 at 12 10 06 PM](https://user-images.githubusercontent.com/70343136/115121336-d47fc500-9f77-11eb-9398-ac7e871ee14c.png)
+![Screen Shot 2021-04-17 at 12 10 33 PM](https://user-images.githubusercontent.com/70343136/115121337-d5185b80-9f77-11eb-9de8-9800702a706c.png)
+![Screen Shot 2021-04-17 at 12 10 39 PM](https://user-images.githubusercontent.com/70343136/115121339-d6498880-9f77-11eb-8033-0b07251c3aef.png)
+![Screen Shot 2021-04-17 at 12 10 51 PM](https://user-images.githubusercontent.com/70343136/115121340-d6e21f00-9f77-11eb-8e8c-d5ec6fce61ba.png)
+![Screen Shot 2021-04-17 at 12 10 58 PM](https://user-images.githubusercontent.com/70343136/115121341-d6e21f00-9f77-11eb-9363-4067d6d0e0fe.png)
