@@ -8,33 +8,33 @@ router.get('/', async (req, res) => {
     try {
         // Get all posts and JOIN with user data
         const dbCommentData = await Comments.findAll({
-          attributes: [
-            'id',
-            'users_id',
-            'projects_id',
-            'comment_content',
-            'date',
-  
-        ],
+            attributes: [
+                'id',
+                'users_id',
+                'projects_id',
+                'comment_content',
+                'date',
+
+            ],
         });
-    
+
         // Serialize data so the template can read it
         const comment = dbCommentData.map((post) => post.get({ plain: true }));
-    
-/* 
-      // Pass serialized data and session flag into template I will create
-      res.render('comments', { 
-        projects, 
-        logged_in: req.session.logged_in 
-      });
- */
-      } catch (err) {
+
+        /* 
+              // Pass serialized data and session flag into template I will create
+              res.render('comments', { 
+                projects, 
+                logged_in: req.session.logged_in 
+              });
+         */
+    } catch (err) {
         console.log(err);
         res.status(500).json(err);
-      }
-    
-  });
-  
+    }
+
+});
+
 
 
 // CREATE comment
