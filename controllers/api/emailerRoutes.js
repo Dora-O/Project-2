@@ -23,7 +23,7 @@ router.post('/', async (req, res) => {
       port: 587,
       secure: false,
       auth: {
-        user: 'premiereshow2021@outlook.com',
+        user: 'premiereshow21@outlook.com',
         pass: 'Welovemanny2021!'
       },
       tls: {
